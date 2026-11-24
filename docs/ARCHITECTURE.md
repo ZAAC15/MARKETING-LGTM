@@ -17,12 +17,19 @@ Plataforma privada de inteligencia comercial y marketing asistida por IA para La
 
 La API debe autenticar y autorizar cada operación; no depender exclusivamente de controles del frontend. Mantener credenciales privilegiadas solo en el servidor, usar mínimo privilegio y revisar políticas RLS y permisos de Storage antes de conectar datos reales. Los secretos se configuran localmente o mediante el gestor de secretos del entorno y nunca se guardan en el repositorio. Las variables `NEXT_PUBLIC_*` son públicas.
 
-## Estructura inicial
+## Implementación inicial
+
+- La web tiene un dashboard de demostración en App Router, una shell responsive con navegación preparada y tokens CSS para la paleta corporativa.
+- El logo entregado por el equipo se sirve desde `apps/web/public/branding/logo-lgtm.png`; el componente `BrandLogo` permite una presentación compacta en el futuro.
+- La API expone `GET /` y `GET /health`, con configuración desde variables de entorno y separación en rutas, servicios y esquemas.
+- La pantalla todavía no se conecta con la API ni con Supabase. Todas las métricas visibles son datos ficticios.
+
+## Estructura
 
 ```text
 apps/
-  web/                 # Next.js (pendiente de inicialización)
-  api/                 # FastAPI (pendiente de inicialización)
+  web/                 # Next.js + TypeScript + Tailwind + ESLint
+  api/                 # FastAPI + Uvicorn + Pydantic Settings
 supabase/
   migrations/          # destino para migraciones futuras revisadas; sin SQL actual
 docs/

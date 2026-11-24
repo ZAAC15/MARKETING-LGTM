@@ -1,10 +1,11 @@
 # MARKETING-LGTM — Roadmap
 
-## Fase 0 — Preparación (actual)
+## Fase 0 — Preparación e inicialización (actual)
 
 - Establecer estructura de monorepo y documentación base.
 - Registrar las tablas existentes sin volver a ejecutar su SQL.
 - Definir prácticas seguras para variables de entorno.
+- Inicializar frontend y API con una vista dashboard de datos ficticios y rutas básicas de estado.
 
 ## Fase 1 — Fundaciones
 
